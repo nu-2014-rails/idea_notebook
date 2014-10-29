@@ -11,7 +11,7 @@ class IdeasController < ApplicationController
     i.desc = params["desc"]
     i.save
     
-    redirect_to "/ideas/#{ i.id }"
+    redirect_to "/ideas"
   end
   
   def edit
@@ -30,7 +30,11 @@ class IdeasController < ApplicationController
     i = Idea.find_by_id(params["id"])
     i.destroy
     
-    redirect_to "/new_idea"
+    redirect_to "/ideas"
+  end
+  
+  def index
+    @ideas = Idea.all
   end
   
 end

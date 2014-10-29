@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   # READ
   get "/ideas/:id" => "ideas#show"
+  get "/ideas" => "ideas#index"
   
   # UPDATE
   get "/ideas/:id/edit" => "ideas#edit"

@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
   
+  # Routes for the Comment resource:
+  # CREATE
+  get '/new_comment' => 'comments#new'
+  get '/create_comment' => 'comments#create'
+
+  # READ
+  get '/comments' => 'comments#index'
+  get '/comments/:id' => 'comments#show'
+
+  # UPDATE
+  get '/comments/:id/edit' => 'comments#edit'
+  get '/comments/:id/update' => 'comments#update'
+
+  # DELETE
+  get '/comments/:id/destroy' => 'comments#destroy'
+  #------------------------------
+
   # CREATE
   get "/new_idea" => "ideas#new"
   get "/create_idea" => "ideas#create"

@@ -3,3 +3,9 @@
   <a href="/ideas/<%= @idea.id %>/edit">edit</a> |
   <a href="/ideas/<%= @idea.id %>/destroy">destroy</a>
 </div>
+
+<ul>
+<% @idea.comments.each do |comment| %>
+  <li><%= comment.contents %> <a href="/comments/<%= comment.id %>">show</a></li>
+<% end %>
+</ul>
